@@ -1,4 +1,4 @@
-# Rocky Linux 9 preinstall scripts
+# Rocky Linux 9 postinstall scripts
 
 Install order:
 
