@@ -13,6 +13,7 @@ sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/dock
 sudo dnf install epel-release
 
 # https://computingforgeeks.com/install-use-ffmpeg-on-rocky-alma-9/
+
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm -y
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm -y
 
@@ -22,7 +23,11 @@ sudo dnf repolist
 
 echo "[4] FFMPEG PREREQUISITES"
 
-sudo dnf install gcc clang cmake procps nano python3-pip git git-lfs ffmpeg ffmpeg-devel
+# https://linuxhint.com/error-command-gcc-failed-exit-status-1/
+
+sudo dnf group install "Development Tools"
+
+sudo dnf install gcc clang cmake procps nano python3-pip git git-lfs ffmpeg ffmpeg-devel python-devel
 
 echo "[5] REMOVING PODMAN"
 
