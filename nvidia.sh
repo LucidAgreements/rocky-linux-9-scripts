@@ -24,7 +24,7 @@ sudo dnf install kernel-devel-$(uname -r) kernel-headers-$(uname -r)
 
 sudo dnf install nvidia-driver nvidia-settings
 
-sudo dnf install cuda-driver
+sudo dnf install cuda-driver cuda-toolkit
 
 sudo dnf install libcudnn8
 
